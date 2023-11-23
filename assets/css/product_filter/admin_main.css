@@ -429,3 +429,28 @@ Product Filter
     color: #6E32C9 ;
     cursor: pointer;
 }
+
+
+
+
+/* Filter Sequece */
+ul#sortable li{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+
+    cursor: grab;
+    cursor: -webkit-grab;
+
+    border: 0.5px solid #ccc;
+    border-radius: 3px;
+    
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+ul#sortable li svg{
+    height: 1.5rem;
+    fill: #3a3737;
+    margin-right: 8px;
+}

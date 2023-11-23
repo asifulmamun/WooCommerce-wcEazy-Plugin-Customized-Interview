@@ -151,7 +151,7 @@ function wceazy_product_filter_save() {
     };
 
     // print
-    console.log(jQuerypostData);
+    // console.log(jQuerypostData);
 
     let jQuerypost_data = {'action': 'wceazy_product_filter_save', 'data': jQuerypostData};
 
