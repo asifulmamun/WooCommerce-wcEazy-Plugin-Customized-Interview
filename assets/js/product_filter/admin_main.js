@@ -98,3 +98,17 @@ function wceazy_product_filter_save() {
 }
 
 
+// check js
+// console.log('hello this is admin');
+
+(function($) {
+// Jquury for sequence
+
+    // sortable init
+    $( function() {
+        $( "#sortable" ).sortable();
+    } );
+
+})(jQuery);
+
+

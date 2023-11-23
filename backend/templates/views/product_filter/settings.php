@@ -113,6 +113,7 @@ $wceazy_pf_stock_filter_checkbox_checked_bg = isset($wceazy_pf_settings["stock_f
                     <div class="tab_item" data-target="tab_rating_filter"><h1>Rating Filter</h1></div>
                     <div class="tab_item" data-target="tab_category_filter"><h1>Category Filter</h1></div>
                     <div class="tab_item" data-target="tab_stock_filter"><h1>Stock Filter</h1></div>
+                    <div class="tab_item" data-target="tab_sequence_custmzr"><h1>Sequence Cusotmizer</h1></div>
                 </div>
             </div>
 
@@ -737,7 +738,26 @@ $wceazy_pf_stock_filter_checkbox_checked_bg = isset($wceazy_pf_settings["stock_f
 
                     </div>
                 </div>
+                
+                <div class="coupon_tab_body" data-id="tab_sequence_custmzr">
+                    <div class="tab_body_title"><h1>Drag and Drop Sequence Customizer</h1></div>
+                    <div class="tab_body_form">
 
+                        <!-- <div class="wceazy_product_filter_field_group wceazy_product_filter_stock_filter_checkbox_checked_bg">
+                        </div> -->
+
+                        <ul id="sortable">
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+                        </ul>
+
+                    </div>
+                </div>
 
             </div>
         </div>
