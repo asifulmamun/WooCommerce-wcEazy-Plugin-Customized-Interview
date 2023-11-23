@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,13 +7,12 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <style>
-  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-  #sortable li span { position: absolute; margin-left: -1.3em; }
+    #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+    #sortable li span { position: absolute; margin-left: -1.3em; }
   </style>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
 </head>
 <body>
  
@@ -24,34 +23,44 @@
     <li class="ui-state-default" data-item="category"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Category Filter</li>
     <li class="ui-state-default" data-item="stock"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Stock Filter</li>
 </ul>
-
-
+ 
 <script>
-$(function() {
-  var customOrder = {
-    'search': 1,
-    'price': 2,
-    'rating': 3,
-    'category': 4,
-    'stock': 5
-  };
+  $(function() {
+    var customOrder = {
+      'search': 1,
+      'price': 2,
+      'rating': 3,
+      'category': 4,
+      'stock': 5
+    };
 
-  $("#sortable").sortable({
-    update: function(event, ui) {
-      var updatedOrder = {};
-      $('#sortable li').each(function(index) {
-        var itemName = $(this).data('item');
-        updatedOrder[itemName] = index + 1;
-      });
+    var sortableList = $("#sortable");
 
-      // Log the updated object to the console
-      console.log(updatedOrder);
-    }
+    // Get the list items and sort them based on the customOrder values
+    var items = sortableList.children('li').detach().toArray();
+    items.sort(function(a, b) {
+      var aValue = customOrder[$(a).data('item')];
+      var bValue = customOrder[$(b).data('item')];
+      return aValue - bValue;
+    });
+
+    // Append the sorted list items to the sortable list
+    sortableList.append(items);
+
+    // Make the list sortable
+    sortableList.sortable({
+      update: function(event, ui) {
+        var updatedOrder = {};
+        sortableList.children('li').each(function(index) {
+          var itemName = $(this).data('item');
+          updatedOrder[itemName] = index + 1;
+        });
+
+        // Log the updated object to the console
+        console.log(updatedOrder);
+      }
+    });
   });
-});
-
-
-
 </script>
 </body>
 </html>
