@@ -745,17 +745,18 @@ $wceazy_pf_stock_filter_checkbox_checked_bg = isset($wceazy_pf_settings["stock_f
 
                         <!-- <div class="wceazy_product_filter_field_group wceazy_product_filter_stock_filter_checkbox_checked_bg">
                         </div> -->
-
-                        <ul id="sortable">
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
-                        </ul>
-
+                            <ul id="sortable">
+                                <li class="ui-state-default" data-item="search"><span
+                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>Search Filter</li>
+                                <li class="ui-state-default" data-item="price"><span
+                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>Price Filter</li>
+                                <li class="ui-state-default" data-item="rating"><span
+                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>Rating Filter</li>
+                                <li class="ui-state-default" data-item="category"><span
+                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>Category Filter</li>
+                                <li class="ui-state-default" data-item="stock"><span
+                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>Stock Filter</li>
+                            </ul>
                     </div>
                 </div>
 
