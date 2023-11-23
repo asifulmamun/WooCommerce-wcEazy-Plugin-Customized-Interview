@@ -4,6 +4,9 @@ $wceazy_product_filter_settings = get_option('wceazy_product_filter_settings', F
 $wceazy_pf_settings = $wceazy_product_filter_settings ? json_decode($wceazy_product_filter_settings, true) : array();
 
 
+// filter sequence
+$wceazy_pf_filter_seq =  $wceazy_pf_settings["updatedOrder"];
+
 
 $wceazy_pf_show_search_filter = isset($wceazy_pf_settings["show_search_filter"]) ? $wceazy_pf_settings["show_search_filter"] : "yes";
 $wceazy_pf_show_price_filter = isset($wceazy_pf_settings["show_price_filter"]) ? $wceazy_pf_settings["show_price_filter"] : "yes";
@@ -123,13 +126,7 @@ $unique_id = rand();
         <?php
 
             // wc sort
-            $wceasySort = [
-                "search" => 3,
-                "price" => 2,
-                "rating" => 4,
-                "category" => 5,
-                "stock" => 1
-            ];
+            $wceasySort = $wceazy_pf_filter_seq;
 
             // ascending order
             asort($wceasySort);
@@ -232,6 +229,10 @@ $unique_id = rand();
                         break;
                 }
             }
+
+            // echo '<pre>';
+            // print_r($wceazy_pf_filter_seq);
+            // echo '</pre>';
         ?>
 
 

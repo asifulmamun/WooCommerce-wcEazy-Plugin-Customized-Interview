@@ -3,6 +3,9 @@
 $wceazy_product_filter_settings = get_option('wceazy_product_filter_settings', False);
 $wceazy_pf_settings = $wceazy_product_filter_settings ? json_decode($wceazy_product_filter_settings, true) : array();
 
+// filter sequence
+$wceazy_pf_filter_seq_json =  isset($wceazy_pf_settings["updatedOrder"]) ? json_encode($wceazy_pf_settings["updatedOrder"]) : null;
+
 
 
 $wceazy_pf_show_search_filter = isset($wceazy_pf_settings["show_search_filter"]) ? $wceazy_pf_settings["show_search_filter"] : "yes";
@@ -757,6 +760,11 @@ $wceazy_pf_stock_filter_checkbox_checked_bg = isset($wceazy_pf_settings["stock_f
                                 <li class="ui-state-default" data-item="stock"><span
                                         class="ui-icon ui-icon-arrowthick-2-n-s"></span>Stock Filter</li>
                             </ul>
+
+                            <script>
+                                var getCustomOrder = <?php echo $wceazy_pf_filter_seq_json; ?>
+                            </script>
+
                     </div>
                 </div>
 

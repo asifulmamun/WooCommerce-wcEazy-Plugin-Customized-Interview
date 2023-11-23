@@ -46,13 +46,20 @@ function wceazy_product_filter_tab_init(){
 var wceazy_seq_temp = null;
 (function($) {
   $(function() {
-    var customOrder = {
-      'search': 3,
-      'price': 2,
-      'rating': 1,
-      'category': 4,
-      'stock': 5
-    };
+
+    if (getCustomOrder === null || getCustomOrder === undefined) {
+      // if default not found
+      var customOrder = {
+        'search': 1,
+        'price': 2,
+        'rating': 3,
+        'category': 4,
+        'stock': 5
+      };
+    }else{
+      var customOrder = getCustomOrder;
+    }
+
 
     var sortableList = $("#sortable");
 
