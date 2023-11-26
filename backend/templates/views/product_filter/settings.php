@@ -4,7 +4,7 @@ $wceazy_product_filter_settings = get_option('wceazy_product_filter_settings', F
 $wceazy_pf_settings = $wceazy_product_filter_settings ? json_decode($wceazy_product_filter_settings, true) : array();
 
 // filter sequence
-$wceazy_pf_filter_seq_json =  isset($wceazy_pf_settings["updatedOrder"]) ? json_encode($wceazy_pf_settings["updatedOrder"]) : null;
+$wceazy_pf_filter_seq_json =  isset($wceazy_pf_settings["updatedOrder"]) ? json_encode($wceazy_pf_settings["updatedOrder"]) : "{'search': 1,'price': 2,'rating': 3,'category': 4,'stock': 5}";
 
 
 

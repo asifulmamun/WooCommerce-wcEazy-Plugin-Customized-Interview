@@ -56,6 +56,7 @@ var wceazy_seq_temp = null;
         'category': 4,
         'stock': 5
       };
+      
     }else{
       var customOrder = getCustomOrder;
     }
