@@ -125,8 +125,14 @@ $unique_id = rand();
         
         <?php
 
-            // wc sort
-            $wceasySort = $wceazy_pf_filter_seq;
+            // if not set the sort then default
+            $wceasySort = isset($wceazy_pf_filter_seq) ? $wceazy_pf_filter_seq : [
+                'search'   => 1,
+                'price'    => 2,
+                'rating'   => 3,
+                'category' => 4,
+                'stock'    => 5
+            ];
 
             // ascending order
             asort($wceasySort);
