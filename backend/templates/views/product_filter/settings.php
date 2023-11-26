@@ -4,9 +4,8 @@ $wceazy_product_filter_settings = get_option('wceazy_product_filter_settings', F
 $wceazy_pf_settings = $wceazy_product_filter_settings ? json_decode($wceazy_product_filter_settings, true) : array();
 
 // filter sequence
-$wceazy_pf_filter_seq_json =  isset($wceazy_pf_settings["updatedOrder"]) ? json_encode($wceazy_pf_settings["updatedOrder"]) : null;
-
-
+$wceazy_pf_filter_seq_json =  isset($wceazy_pf_settings["updatedOrder"]) ? json_encode($wceazy_pf_settings["updatedOrder"]) : "{'search': 1,'price': 2,'rating': 3,'category': 4,'stock': 5}";
+echo '<script> var getCustomOrder = ' . $wceazy_pf_filter_seq_json . '</script>';
 
 $wceazy_pf_show_search_filter = isset($wceazy_pf_settings["show_search_filter"]) ? $wceazy_pf_settings["show_search_filter"] : "yes";
 $wceazy_pf_show_price_filter = isset($wceazy_pf_settings["show_price_filter"]) ? $wceazy_pf_settings["show_price_filter"] : "yes";
@@ -765,11 +764,6 @@ $wceazy_pf_stock_filter_checkbox_checked_bg = isset($wceazy_pf_settings["stock_f
                                     <span><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M128 136c0-22.1-17.9-40-40-40L40 96C17.9 96 0 113.9 0 136l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40l0-48zm0 192c0-22.1-17.9-40-40-40H40c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM288 328c0-22.1-17.9-40-40-40H200c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM448 328c0-22.1-17.9-40-40-40H360c-22.1 0-40 17.9-40 40v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328z"/></svg></span>
                                     <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Stock Filter</li>
                             </ul>
-
-                            <script>
-                                var getCustomOrder = <?php echo $wceazy_pf_filter_seq_json; ?>
-                            </script>
-
                     </div>
                 </div>
 
